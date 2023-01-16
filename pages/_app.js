@@ -1,9 +1,9 @@
-import type { AppProps } from "next/app";
+
 import "../styles/globals.scss";
 import React, { useEffect, useState } from "react";
 import { Layout } from "../components";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Component {...pageProps} />

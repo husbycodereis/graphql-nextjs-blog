@@ -1,5 +1,6 @@
+import React, { useState, useEffect } from "react";
+
 import Link from "next/link";
-import React from "react";
 const categories = [
   { name: "React", slug: "react" },
   { name: "Web Development", slug: "web-dev" },
@@ -11,13 +12,13 @@ const Header = () => {
         <div className="block md:float-left">
           <Link href="/">
             <span className="text-4xl font-bold text-white cursor-pointer">
-              GraphCMS
+              Graph CMS
             </span>
           </Link>
         </div>
         <div className="hidden md:float-left md:contents">
-          {categories.map((category) => (
-            <Link key={category.slug} href={`/category/${category.slug}`}>
+          {categories.map((category, index) => (
+            <Link key={index} href={`/category/${category.slug}`}>
               <span className="mt-2 ml-4 font-semibold text-white align-middle cursor-pointer md:float-right">
                 {category.name}
               </span>
