@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import {
   PostWidget,
   Categories,
@@ -6,9 +7,14 @@ import {
   Author,
   CommentsForm,
   Comments,
+  Loader,
 } from "../../components/index";
 import { getPosts, getPostDetails } from "../../services";
 const PostDetails = ({ post }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <Loader />;
+  }
   console.log("post", post);
   return (
     <div className="container px-10 mx-auto mb-8">
@@ -44,7 +50,7 @@ export async function getStaticPaths() {
   const posts = await getPosts();
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   };
 }
 
