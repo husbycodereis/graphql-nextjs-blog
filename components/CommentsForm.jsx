@@ -9,7 +9,7 @@ const CommentsForm = ({ slug }) => {
   const nameEl = useRef();
   const emailEl = useRef();
   const storeDataEl = useRef();
- 
+
   useEffect(() => {
     nameEl.current.value = window.localStorage.getItem("name");
     emailEl.current.value = window.localStorage.getItem("email");
@@ -46,14 +46,14 @@ const CommentsForm = ({ slug }) => {
     });
   };
   return (
-    <div className="p-8 pb-12 mb-8 bg-white rounded-lg shadow-lg">
+    <div className="p-8 pb-12 mb-8 bg-gray-800 rounded-lg shadow-lg">
       <h3 className="pb-4 mb-8 text-xl font-semibold border-b">
         Leave a Reply
       </h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea
           ref={commentEl}
-          className="w-full p-4 text-gray-700 bg-gray-100 rounded-lg outline-none focus:ring-2 focus:ring-gray-200"
+          className="w-full p-4 text-white bg-gray-100 rounded-lg outline-none focus:ring-2 focus:ring-gray-200"
           placeholder="comment"
           name="comment"
         />
@@ -64,14 +64,14 @@ const CommentsForm = ({ slug }) => {
           ref={nameEl}
           placeholder="name"
           name="name"
-          className="w-full px-4 py-2 text-gray-700 bg-gray-100 rounded-lg outline-none focus:ring-2 focus:ring-gray-200"
+          className="w-full px-4 py-2 text-white bg-gray-100 rounded-lg outline-none focus:ring-2 focus:ring-gray-200"
         />
         <input
           type="text"
           ref={emailEl}
           placeholder="email"
           name="email"
-          className="w-full px-4 py-2 text-gray-700 bg-gray-100 rounded-lg outline-none focus:ring-2 focus:ring-gray-200"
+          className="w-full px-4 py-2 text-white bg-gray-100 rounded-lg outline-none focus:ring-2 focus:ring-gray-200"
         />
       </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
@@ -85,7 +85,7 @@ const CommentsForm = ({ slug }) => {
           />
           <label
             htmlFor="storeData"
-            className="ml-2 text-gray-500 cursor-pointer"
+            className="ml-2 text-gray-300 cursor-pointer"
           >
             Save email and name
           </label>

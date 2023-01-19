@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-image: url("../public/bg.jpg");
+  background-color: #1c0b25;
   background-repeat: no-repeat;
   background-size: cover;
   &:before {
@@ -56,10 +56,16 @@ body {
 }
 
 a {
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+p {
+  color: white;
+}
+h3 {
+  color: white;
 }

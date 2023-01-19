@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const PostCard = ({ post }) => {
   return (
-    <div className="p-0 pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8">
+    <div className="p-0 pb-12 mb-8 bg-gray-800 rounded-lg shadow-lg lg:p-8">
       <div className="relative mb-6 overflow-hidden shadow-md pb-[200px] lg:pb-[400px]">
         <img
           src={post.featuredImage.url}
@@ -12,7 +12,7 @@ const PostCard = ({ post }) => {
           className="absolute object-top w-full rounded-t-lg shadow-lg h-[200px] lg:h-[400px] lg:rounded-lg"
         />
       </div>
-      <h1 className="mb-8 text-3xl font-semibold text-center transition duration-700 cursor-pointer hover:text-pink-600">
+      <h1 className="mb-8 text-3xl font-semibold text-center text-white transition duration-700 cursor-pointer hover:text-pink-600">
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className="items-center justify-center block w-full mb-8 text-center lg:flex">
@@ -24,11 +24,11 @@ const PostCard = ({ post }) => {
             width="30px"
             className="align-middle rounded-full"
           />
-          <p className="inline ml-2 text-lg text-gray-700 align-middle">
+          <p className="inline ml-2 text-lg text-white align-middle">
             {post.author.name}
           </p>
         </div>
-        <div className="font-medium text-gray-700">
+        <div className="font-medium text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="inline w-6 h-6 mr-2 text-pink-500"
@@ -47,7 +47,7 @@ const PostCard = ({ post }) => {
         </div>
       </div>
       <div>
-        <p className="px-4 mb-8 text-lg font-normal text-center text-gray-700 lg:px-20">
+        <p className="px-4 mb-8 text-lg font-normal text-center text-white lg:px-20">
           {post.excerpt}
         </p>
         <div className="text-center">
